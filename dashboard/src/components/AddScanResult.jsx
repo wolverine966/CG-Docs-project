@@ -22,10 +22,10 @@ const defaultValue={
     path: '',
     line: '',
     description: '',
-    security: '',
-    queueat: '',
-    ScaningAt: '',
-    FinishedAt: ''
+    security: ''
+    // queueat: '',
+    // ScaningAt: '',
+    // FinishedAt: ''
 
 }
 
@@ -53,23 +53,18 @@ const AddScanResult = () =>{
         <Container>
             <Typography variant="h4">Add Scan Result</Typography>
             <FormControl>
+                {/* <InputLabel>Status</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name='status'/>  */}
+
+                 
                 <InputLabel>Status</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='status'/> 
-
-
-                  {/* <InputLabel >Select Status</InputLabel>
-                   <Select  value={user} onChange={setUser} */}
-      
-                  {/* <MenuItem value={'Queued'}>Queued</MenuItem>
-                  <MenuItem value={'InProgress'}>In Progress</MenuItem>
-                  <MenuItem value={'Success'}>Success</MenuItem>
-                 <MenuItem value={'Failure'}>Failure</MenuItem>  */}
-                 {/* <option value="Queued"></option>
-                 <option value="INprogre"></option>
-                 <option value=""></option>
-                 <option value=""></option>
-                 <option value=""></option> */}
-            {/* </Select> */}
+        <Select  onChange={(e) => onValueChange(e)} name='status'>
+          <MenuItem value={'InProgress'}>InProgress</MenuItem>
+          <MenuItem value={'Success'}>Success</MenuItem>
+          <MenuItem value={'Queued'}>Queued</MenuItem>
+          <MenuItem value={'Failure'}>Failure</MenuItem>
+        </Select>
+                  
             </FormControl>
             <FormControl>
                 <InputLabel>Repository Name</InputLabel>
@@ -99,7 +94,7 @@ const AddScanResult = () =>{
                 <InputLabel>Security</InputLabel>
                 <Input onChange={(e) => onValueChange(e) }name='security'/>
             </FormControl>
-            <FormControl>
+            {/* <FormControl>
                 <InputLabel>Queued At</InputLabel>
                 <Input onChange={(e) => onValueChange(e) }name='queueat'/>
             </FormControl>
@@ -110,7 +105,7 @@ const AddScanResult = () =>{
             <FormControl>
                 <InputLabel>Finished At</InputLabel>
                 <Input onChange={(e) => onValueChange(e) }name='FinishedAt'/>
-            </FormControl>
+            </FormControl> */}
             <FormControl>
                <Button variant="contained" onClick={() => addScanDetail()}>Add Scan</Button>
             </FormControl>
