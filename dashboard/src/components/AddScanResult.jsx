@@ -91,7 +91,7 @@ const AddScanResult = () =>{
                 <Input onChange={(e) => onValueChange(e) }name='description'/>
             </FormControl>
             <FormControl>
-                <InputLabel>Security</InputLabel>
+                <InputLabel>Severity</InputLabel>
                 <Input onChange={(e) => onValueChange(e) }name='security'/>
             </FormControl>
             {/* <FormControl>

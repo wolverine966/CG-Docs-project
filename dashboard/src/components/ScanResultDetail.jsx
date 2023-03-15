@@ -10,7 +10,7 @@ const ScanResultDetail = () =>{
 
     const [user, setUser] = useState([]);
 
-    const{id} = useParams();
+    const { id } = useParams();
     useEffect(() =>{
         loadDetails();
 
@@ -18,6 +18,9 @@ const ScanResultDetail = () =>{
 
     const loadDetails = async () =>{
         const response = await getScan1(id);
+        setUser(response.data);
+        // console.log(user);
+     
     }
 
     return (
@@ -31,6 +34,20 @@ const ScanResultDetail = () =>{
                     
                 </TableRow>
             </TableHead>
+            <TableBody>
+                {
+                  user.map(user1 => (
+                    <TableRow>
+                        <TableCell>{user1.ruleid}</TableCell>
+                        <TableCell>{user1.description}</TableCell>
+                        <TableCell>{user1.security}</TableCell>
+                        <TableCell>{user1.path}</TableCell>
+
+                    </TableRow>
+                  ))
+
+                }
+            </TableBody>
         </Table>
     )
 
