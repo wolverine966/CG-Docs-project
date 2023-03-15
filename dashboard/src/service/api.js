@@ -19,3 +19,12 @@ export const getScan = async () => {
         console.log('Error while calling getScan API',error);
     }
 }
+
+export const getScan1 = async (id) =>{
+    try{
+        return await axios.get(`${URL}/${id}`)
+
+    }catch(error) {
+        console.log('Error while calling getScan1 api',error);
+    }
+}

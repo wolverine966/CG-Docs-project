@@ -24,3 +24,15 @@ export const getScan = async (request,response) => {
     response.status(404).json({ message: error.message});
   }
 }
+
+export const getScan1 = async (request,response) => {
+    console.log(request.params._id);
+
+  try{
+
+    const users = await scan.find({});
+    response.status(200).json(users);
+  }catch(error) {
+    response.status(404).json({ message: error.message});
+  }
+}
