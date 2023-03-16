@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/add'  element= {<AddScanResult />} />
         <Route path='/list' element={ <ScanResultList />} />
-        <Route path='/detail' element={ <ScanResultDetail />} />
+        <Route path='/detail/:id' element={ <ScanResultDetail />} />
       </Routes>
         
     </BrowserRouter>

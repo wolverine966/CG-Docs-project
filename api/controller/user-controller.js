@@ -26,12 +26,13 @@ export const getScan = async (request,response) => {
 }
 
 export const getScan1 = async (request,response) => {
-    console.log(request.params._id);
+    console.log(request.params.id);
 
   try{
 
-    const users = await scan.find({});
-    response.status(200).json(users);
+    // const user = await scan.find({_id: request.params.id });
+    const user = await scan.findById(request.params.id);
+    response.status(200).json(user);
   }catch(error) {
     response.status(404).json({ message: error.message});
   }

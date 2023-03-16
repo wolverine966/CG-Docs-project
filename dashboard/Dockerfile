@@ -5,12 +5,14 @@ FROM node
 
 #working directory
 
-WORKDIR /app
+WORKDIR /dashboard
 
 COPY package*.json ./
 
 # Installing
 
 RUN npm install
+
+COPY ..
 
 EXPOSE 3000

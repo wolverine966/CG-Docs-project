@@ -22,7 +22,10 @@ export const getScan = async () => {
 
 export const getScan1 = async (id) =>{
     try{
-        return await axios.get(`${URL}/${id}`)
+        return await axios.get(`${URL}/detail/${id}`)
+        // const {ab} = await axios.get(`${URL}/${id}`);
+        // console.log(ab);
+
 
     }catch(error) {
         console.log('Error while calling getScan1 api',error);

@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post('/add', addScan);
 router.get('/list', getScan);
-router.get('/:id', getScan1);
+router.get('/detail/:id', getScan1);
 
 export default router;

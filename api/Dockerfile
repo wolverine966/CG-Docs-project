@@ -7,11 +7,11 @@ FROM node
 WORKDIR /app
 
 #install
-COPY package*.json ./
+COPY package*.json .
 
 RUN npm install
 
-#copy app
+COPY ..
 
 #exports
 EXPOSE 8000

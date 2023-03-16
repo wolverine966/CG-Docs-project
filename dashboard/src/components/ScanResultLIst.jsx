@@ -57,7 +57,7 @@ const ScanResultList = () =>{
                         <TBody>
                             <TableCell>{user.Reponame}</TableCell>
                             <TableCell>{user.status}</TableCell>
-                            <TableCell><Link to={`/detail?id=${user._id}`}>{user.status}</Link></TableCell>
+                            <TableCell><Link to={`/detail/${user._id}`}>{user.status}</Link></TableCell>
                             <TableCell>{user.createdAt}</TableCell>
                             <TableCell>{user._id}</TableCell>
                         </TBody>
